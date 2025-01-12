@@ -4,8 +4,10 @@ import './App.css'
 function App() {
   return (
     <>
-      <Header />
-      <Page />
+      <div className='top-content'>
+        <Header />
+        <MainContent />
+      </div>
       <Footer />
     </>
   )
@@ -13,15 +15,24 @@ function App() {
 
 function Header() {
   return (
-    <img src={reactLogo} width="40px" alt="React Logo" />
+    <header>
+      <img src={reactLogo} className='nav-logo' alt="React Logo" />
+      <nav>
+        <ul className='nav-list'>
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
-function Page() {
+function MainContent() {
   return (
     <main>
       <h1>Reasons I'm excited to learn React</h1>
-      <ol>
+      <ol className='main-list'>
         <li>I hear it future proofs my career</li>
         <li>I hear it is easy compared to Angular</li>
         <li>It improves my chances of getting a job</li>
@@ -32,7 +43,9 @@ function Page() {
 
 function Footer() {
   return (
-    <p>© 2025 Me development. All rights reserved.</p>
+    <footer>
+      <small>© 2025 My development. All rights reserved.</small>
+    </footer>
   )
 }
 
